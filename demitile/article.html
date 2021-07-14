@@ -1,0 +1,235 @@
+<html>
+	<head>
+		<title>Improved Tiling Control in a Stacking Window Environment</title>
+		<meta name="author" content="David Yockey">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<h1 id="title">Improved Tiling Control<br>in a<br>Stacking Window Environment</h1>
+		<h2 id="byline">by David Yockey</h2>
+		<div id="content">
+			<div id="introduction" class="textblock">
+				<p class="parauno">Modern stacking window managers generally provide a degree of window
+				tiling functionality, where the tiling is usually controlled in one of
+				two ways: by window dragging or selection among keyboard shortcuts.
+				Both are effective, but each has its problems.
+				
+				<p>In the first case, the active window is tiled by using a pointing
+				device to drag it to a particular edge or edge portion of the screen,
+				at which point the window is automatically sized and positioned into
+				the corresponding tile location. This control is simple, but is rather
+				slow and is limited in the number of tile locations that can effectively
+				addressed.
+				
+				<p>In the second case, the active window is tiled to a particular
+				location by use of a corresponding one of a number of keyboard shortcuts,
+				the shortcuts being either predefined by the environment or configured by
+				the user. This control is fast and allows for a large number of tiling
+				locations, but remembering all of the keyboard shortcuts can be problematic.
+				Also, where necessary, user configuration of a collection of shortcuts can
+				be frustrating.
+				
+				<p>An improved approach to control would aim to provide adequate speed
+				for most users and permit numerous tiling locations while avoiding the
+				need for a multitude of actuators. The proposed solution described here
+				uses a pointer position to determine coarse tile location and a single
+				tiling actuator to actuate coarse tiling. The same tiling actuator is
+				further used to toggle between a number of fine tile sizes, thus
+				limiting the number of controls required to two. For convenience,
+				the proposed solution is referred to herein as demitile control or
+				demitiling.
+			</div>
+			
+			<div id="coarse_tiling" class="textblock">
+				<div id="coarse_grid_determination">
+					<h3>1</h3>
+					
+					<p class="parauno">Demitile control enables coarse tiling by dividing the
+					display into a number of areas within which the pointer can be
+					positioned to indicate a particular tiling. The number of divisions
+					should provide areas large enough to allow for easy positioning of
+					the pointer within a selected area. On a 1920x1080 display, division
+					into a 3x3 grid of equal-size areas is a workable arrangement.
+					More divisions to provide additional coarse tiling options may be
+					workable given a larger display or a pointing device allowing
+					sufficiently precise control.
+					
+					<p>Desktop exclusion areas where windows are normally prevented from
+					being automatically positioned, such as areas occupied by panels or
+					taskbars, should also be considered in establishing the coarse tiling
+					grid and consequent window tiling. Two possibilities for addressing
+					the presence of exclusion areas are contemplated: division of display
+					working area and constraint of overlapping tiles.
+					
+					<p>In the first case, the exclusion areas are effectively subtracted
+					from the total display area to provide a working area. The coarse
+					tiling grid is then determined and windows then tiled as if the display
+					were only the size of the working area. In this case, a window tiled to
+					one half of the effective display covers half of the working area, and
+					a centered window is centered within the working area but not necessarily
+					centered within the display as a whole.
+					
+					<p>In the second case, the exclusion areas are ignored in determining
+					the coarse tiling grid. In this case, a tiled window that overlaps an
+					exclusion area is reduced in size along the appropriate dimensions to
+					avoid the overlap. A window tiled to one half of the display that would
+					overlap an exclusion area to the side of the display is thus reduced in
+					width to avoid the overlap, potentially resulting in windows tiled to
+					halves of the display having different widths. However, a centered
+					window overlapping no exclusion area would still be centered within
+					the overall display.
+					
+					<p>In either case, a pointer location that happens to be within an
+					exclusion area should be considered to be within the closest adjacent
+					grid area to avoid conveying the impression of there being dead zones
+					within the grid.
+				</div>
+				
+				<div id="coarse_grid_use">
+					<h3>2</h3>
+					
+					<p class="parauno">With the pointer positioned in a given area of a display divided
+					in a 3x3 grid as discussed above, activating the tiling actuator will
+					cause the active window to be tiled as indicated in the following table.
+					</p>
+				
+					<table id='coarsegrid' border="1">
+						<tr>
+							<td>Tile to Upper-Left Quarter</td>
+							<td>Tile to Upper Half</td>
+							<td>Tile to Upper-Right Quarter</td>
+						</tr>
+						<tr>
+							<td>Tile to Left Half</td>
+							<td>Tile to Center</td>
+							<td>Tile to Right Half</td>
+						</tr>
+						<tr>
+							<td>Tile to Lower-Left Quarter</td>
+							<td>Tile to Lower Half</td>
+							<td>Tile to Lower-Right Quarter</td>
+						</tr>
+						<caption>Display Divisions for Coarse Tiling Control</caption>
+					</table>
+					
+					<p>Consequently, coarse tiling provides the same tiling options as
+					many stacking window managers, i.e. tiling to quarters, left/right
+					halves, and top/bottom halves of the display. It also provides a
+					"Tile to Center" option	that results in a centered active window of
+					half display width. While the resulting centered window fails to tile
+					with other coarse tiled windows, it does tile with demitiling's fine
+					tiled windows.
+				</div>
+			</div>
+			
+			<div id="fine_tiling" class="textblock">
+				<h3>3</h3>
+				
+				<p class="parauno">Fine tiling can be performed once a window has been coarse tiled.
+				Demitiling control allows for fine tiling by repeated activation of the
+				tiling actuator. The repeated actuation toggles the tile through a
+				sequence of widths based on the tile location.
+				
+				<p>The number of widths	in a sequence being determined based on the
+				number of coarse grid divisions so as to provide the greatest number of
+				possible tiling arrangements. For the 3x3 coarse grid discussed above,
+				fine tiling sequences are contemplated as follows:
+				
+				<ul>
+					<li>Corner tiles toggle though quarter,
+					three-quarters, and half display width, with tiles flush left or
+					right as appropriate.
+					<li>Left/right half tiles also toggle though quarter,
+					three-quarters, and half display width, with tiles flush left or
+					right as appropriate.
+					<li>Top/bottom half tiles toggle between half and full display
+					width, with tiles centered horizontally.
+					<li>A center-tiled window is excluded from fine tiling since resulting
+					window sizes would not tile with any other demitiled windows.
+				</ul>
+				
+				<p>Such fine tiling enables a greater variety of tiled window arrangements
+				than window dragging with a minimum of additional controls.
+				Examples of tiling arrangements thus enabled are illustrated in the
+				following figure.
+				
+				<figure id="figtiles">
+					<div>
+						<img src="TilesEg.png" width="691" height="365">
+					</div>
+					<figcaption>Tiled window arrangement examples</figcaption>
+				</figure>
+			</div>
+			
+			<div id="hardware" class="textblock">
+				<h3>4</h3>
+				
+				<p class="parauno">The most common pointing device used for demitiling on a desktop
+				machine is likely to be a three-button/scroll-wheel mouse with the
+				tiling actuator being a keyboard key or key combination assigned a
+				shortcut for triggering actuator software. Where a 4+ button mouse
+				is used, the keyboard key may be eliminated in favor of an extra
+				button on the mouse, reducing demitiling to a point & click operation.
+				
+				<p>In the case of a laptop, the pointing device would most likely be
+				a touchpad, and the tiling actuator again a keyboard shortcut. However,
+				a touchpad offers additional actuator options. Depending on the
+				configurability of the touchpad, a tap on a designated touchpad area or
+				a designated multi-finger tap might be preferred over use of a keyboard
+				key.
+				
+				<p>Using a pointing device and a keyboard key, selection of the key such
+				that it can be pressed with the hand opposite that operating the pointing
+				device is advisable. By so doing, the user need not unhand the pointing
+				device to operate the selected key or vice versa.
+				
+				<p>Other pointing devices and/or tiling actuators may be more appropriate
+				depending on the user and/or application, particularly in addressing
+				accessibility issues.
+			</div>
+			
+			<div id="conclusion" class="textblock">
+				<div id="summary">
+					<h3>5</h3>
+					
+					<p class="parauno">Demitile control as described provides for quick tiling, a rich
+					variety of tiling arrangements, and a minimum of control complexity.
+					As an improvement within the domain of stacking window managers,
+					demitiling is not meant to displace existing tiling window managers
+					which are preferred by power users and demonstrably superior for many
+					use cases. It can, however, enhance the usefulness of tiling within
+					desktop environments preferred by the majority of computer users.
+				</div>
+				
+				<div id="demo">
+					<h3>6</h3>
+					
+					<p class="parauno">The following video demonstrates an implementation of the improved
+					tiling control described above. A three-button/scroll-wheel mouse and
+					a keyboard shortcut assigned to the Menu key are used as the controls,
+					the display resolution is 1920x1080. The software used in the video,
+					entitled "demitile", is a proof-of-concept application implemented as
+					a Bash script that implements the 3x3 grid coarse tiling, toggled fine
+					tiling, and working area handling of exclusion areas described above.
+					While useful as is, such control would ideally be implemented in a
+					compiled language to improve performance, and/or
+					integrated directly into a stacking window manager.
+					
+					<div id="demovideocontainer">
+						<iframe id="demovideo" src="https://player.vimeo.com/video/571750861" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<div id="copyright">
+			<p>Improved Tiling Control in a Stacking Window Environment
+			<p>Copyright © 2021 David Yockey
+			<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a><span class="printableurl"> (http://creativecommons.org/licenses/by-nc-nd/4.0/)</span>.
+			<p>Permissions beyond the scope of this license may be requested by
+			contacting the author at licensing@diffengine.net with the text
+			<span>Permission Request</span> in the subject line;
+			requests lacking this text in the subject line will be ignored.
+		</div>
+	</body>
+</html>

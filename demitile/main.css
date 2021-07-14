@@ -1,0 +1,140 @@
+@page {
+	margin: .5in;
+}
+
+@media screen, print {
+	body {
+		font-family: "Times New Roman", "Times Roman", Times, serif;
+	}
+	
+	#content {
+		line-height: 1.2;
+	}
+
+	#title, #byline {
+		text-align: center;
+	}
+
+	#coarsegrid {
+		width: 96%;
+		margin: 0 auto;
+		margin-top: 1.33em;
+		border-collapse: collapse;
+	}
+
+	#coarsegrid td {
+		padding: .33em;
+		width: 33%;
+		text-align: center;
+		font-family: sans-serif;
+		font-size: 7pt;
+	}
+
+	#coarsegrid caption {
+		caption-side: bottom;
+		text-align: left;
+		font-size: 8pt;
+		font-style: italic;
+		margin-top: 3px;
+	}
+
+	#figtiles {
+		width: 96%;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+	#figtiles div {
+		border: 1px solid #d0d0d0;
+		padding: 2% 0;
+	}
+
+	#figtiles img {
+		width: 96%;
+		height: auto;
+		margin: 0 2%;
+	}
+
+	#figtiles figcaption {
+		text-align: left;
+		font-size: 8pt;
+		font-style: italic;
+		margin-top: 3px;	
+	}
+	
+	/* 56.25% padding in the following rule provides a 16:9 aspect ratio box. */
+	/* From https://jameshfisher.com/2017/08/30/how-do-i-make-a-full-width-iframe/ */
+	#demovideocontainer {
+		position:relative;
+		padding-top:56.25%;
+		margin-top: 1em;
+	}
+
+	#demovideo {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+	
+	.textblock h3 {
+		text-align:center;
+	}
+	
+	.parauno {
+		margin:0;
+		padding:0;
+	}
+	
+	#copyright {
+		margin-top: 1.5em;
+		border-top: 2px solid gray;
+	}
+
+	#copyright p:first-child {
+		font-style: italic;
+	}
+
+	#copyright :nth-last-child(-n+3) {
+		font-size: small;
+	}
+
+	#copyright p:last-child span {
+		font-style: italic;
+	}
+}
+
+@media screen {
+	body {
+		max-width: 45em;
+		margin: 2em auto;
+	}
+	
+	.textblock {
+		column-count: 2;
+		column-fill: balance;
+	}
+
+	.textblock h3 {
+		column-span: all;
+	}
+	
+	.printableurl {
+		display:none;
+	}
+}
+
+@media print {
+	#content {
+		line-height: 1.35;
+		font-size: 12pt;
+		text-align: justify;
+		column-count: 2;
+		column-fill: balance;		
+	}
+	
+	.printableurl {
+		display:inline;
+	}
+}
