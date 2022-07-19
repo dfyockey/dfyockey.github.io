@@ -1,0 +1,528 @@
+<html>
+<head>
+
+<title>GuiNotes Instruction Manual - Version 1.0</title>
+
+<style>
+
+h1 {
+	text-align:center;
+}
+
+a {
+	color:blue;
+	text-decoration:none;
+}
+
+.cleardiv {
+	clear:right;
+}
+
+#img1, #img2, #trayimg {
+	float:right;
+	text-align:center;
+	font-style:italic;
+}
+
+#img1 {
+	width:180px;
+}
+
+#img2 {
+	width:275px;
+}
+
+#trayimg {
+	width:150px;
+}
+
+.guinoteimg {
+	text-align:center;
+	font-style:italic;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<blockquote>
+
+
+<hr>
+<h1>GuiNotes Instruction Manual - Version 1.0</h1>
+<hr>
+
+
+<h2>Table of Contents</h2>
+<ol type="I">
+	<li><a href="#I.">Introduction</a>
+	<li><a href="#II.">System Requirements</a>
+	<li><a href="#III.">Parts of the Application</a>
+	<ol type="A">
+		<li><a href="#III.A.">Taskbar Icon &amp; Menu</a>
+		<li><a href="#III.B.">Open GuiNotes</a>
+		<li><a href="#III.C.">Closed GuiNotes</a>
+	</ol>
+	<li><a href="#IV.">Creating New GuiNotes</a>
+	<li><a href="#V.">Opening GuiNotes</a>
+	<li><a href="#VI.">Editing GuiNotes</a>
+	<ol type="A">
+		<li><a href="#VI.A.">Standard Editing Functions</a>
+		<li><a href="#VI.B.">Changing GuiNote Color</a>
+	</ol>
+	<li><a href="#VII.">Printing GuiNotes</a>
+	<ol type="A">
+		<li><a href="#VII.A.">Sizing Print Output</a>
+	</ol>
+	<li><a href="#VIII.">Closing GuiNotes</a>
+	<li><a href="#IX.">Deleting GuiNotes</a>
+	<li><a href="#X.">Positioning of Closed GuiNotes</a>
+	<ol type="A">
+		<li><a href="#X.A.">Manual Positioning</a>
+		<ol type="1">
+			<li><a href="#X.A.1.">Bring to Front</a>
+			<li><a href="#X.A.2.">Send to Back</a>
+			<li><a href="#X.A.3.">Restack Notes</a>
+			<li><a href="#X.A.4.">Delete Spaces</a>
+		</ol>
+		<li><a href="#X.B.">Automatic Positioning</a>
+		<ol type="1">
+			<li><a href="#X.B.1.">Positioning on the Active Window Title Bar</a>
+			<ol type="i">
+				<li><a href="#X.B.1.i.">Multiple Document Interfaces Applications</a>
+				<li><a href="#X.B.1.ii.">Tool Windows</a>
+				<li><a href="#X.B.1.iii.">Open GuiNotes</a>
+			</ol>
+			<li><a href="#X.B.2.">Overlapping, Compression and Hiding on the Active Window Title Bar</a>
+			<li><a href="#X.B.3.">Hiding in Other Situations</a>
+			<ol type="i">
+				<li><a href="#X.B.3.i.">No Active Window</a>
+				<li><a href="#X.B.3.ii.">Active Window has no Title Bar</a>
+				<li><a href="#X.B.3.iii.">Active Window has a Virtual Title Bar</a>
+			</ol>
+		</ol>
+		<li><a href="#X.C.">Automatic Positioning Options</a>
+		<ol type="1">
+			<li><a href="#X.C.1.">Avoid Captions</a>
+			<li><a href="#X.C.2.">Avoid Added Button</a>
+			<li><a href="#X.C.3.">Hide on Popups</a>
+		</ol>
+	</ol>
+</ol>
+
+
+
+
+
+<a name="I."></a><h2>I. Introduction</h2>
+
+<p>GuiNotes (pronounced &quot;gooey notes&quot;) are an electronic equivalent of paper sticky notes. Like paper sticky
+notes that stick to your monitor, GuiNotes stick to the title bar of your currently active window. Unlike paper sticky
+notes, GuiNotes automatically reposition themselves to stay visible yet out of your way -- when a different window is
+activated, the GuiNotes automatically move to that window's title bar.
+
+<p>You can use GuiNotes to jot down bits of information such as phone numbers, directions, web page or email addresses,
+or anything else you might write on a paper sticky note.
+
+<p>GuiNotes can be opened for editing.  When opened, a GuiNote is temporarily removed from the active window title bar
+and displayed instead as a normal &quot;always on top&quot; window.  You can leave GuiNotes opened for editing or ease
+of reading while you work.  Closing a GuiNote restores it to its position on the active window title bar.
+
+
+
+
+
+<a name="II."></a><h2>II. System Requirements</h2>
+
+<p>Windows 98, ME, NT4, 2000 or XP.
+
+
+
+
+
+<a name="III."></a><h2>III. Parts of the Application</h2>
+
+<!-- Taskbar Icon -->
+<span id="img1">&nbsp; &nbsp;<img src="TaskbarIconMenu.jpg">&nbsp; &nbsp;<br>&nbsp;<br><small>Taskbar Icon Menu</small><br>&nbsp;<br></span><span id="trayimg"><img src="TaskbarTray.jpg"><br>&nbsp;<br><small>Status Tray showing<br>Yellow GuiNotes Icon</small><br>&nbsp;<br></span><a name="III.A."></a><h3>III.A. Taskbar Icon &amp; Menu</h3>
+
+<p>GuiNotes displays a Taskbar Icon in the status tray on the Windows taskbar that indicates the current default note
+color.  Double-clicking on the Taskbar Icon creates a new GuiNote of the default color.
+
+<p>Application options and controls are provided in the Taskbar Icon Menu, which is accessed by right-clicking on the
+Taskbar Icon.
+
+<!--
+<p>The options pertain to positioning of closed GuiNotes and
+may be checked or unchecked to enable or disable the indicated function.  These options include:
+
+<ul>
+	<li>Avoid Captions,</li>
+	<li>Avoid Added Button, and</li>
+	<li>Hide on Popups.</li>
+</ul>
+
+<p>The remaining items are controls, which include:
+
+<ul>
+	<li>Five New Note items, one for each color of note,</li>
+	<li>About..., which displays a dialog box with information about the application, and</li>
+	<li>Close, which closes the application.</li>
+</ul>
+
+-->
+
+
+<div class="cleardiv">
+<!-- Open GuiNotes -->
+<span id="img2"><br>&nbsp; &nbsp;<img src="GuiNote.jpg">&nbsp; &nbsp;<br>&nbsp;<br><small>An Open GuiNote</small><br>&nbsp;<br></span><a name="III.B."></a><h3>III.B. Open GuiNotes</h3>
+
+<p>An open GuiNote is a note that is open for editing. It is a normal &quot;always on top&quot; 
+window that can be moved and resized. Text typed into the GuiNote is automatically saved when it is closed or when
+another window is activated.
+
+<p>The maximum text length of a GuiNote is limited to 512 characters.  A character count is displayed in the
+title bar when the number of characters reaches or exceeds 450 characters.  Pasted text exceeding the limit is truncated
+to 512 characters.
+
+<p>Each open GuiNote includes a right-click menu with controls for editing, printing, closing and deletion.
+</div>
+
+
+
+
+
+
+<div class="cleardiv">
+<!-- Closed GuiNotes -->
+<a name="III.C."></a><h3>III.C. Closed GuiNotes</h3>
+
+<p>A closed GuiNote is a note that is displayed on the title bar of the currently active window with the first few words
+of the note showing. When a different window is activated, for example when the user clicks on another window to work in
+that window, closed GuiNotes automatically move to the new active window's title bar (for details, see <a href="#X.">X. Positioning of
+Closed GuiNotes</a>). The text of a closed GuiNote is read only - a note must be opened to edit its text.<br>&nbsp;<br>
+
+
+<div class="guinoteimg"><img src="GuiNotes1.jpg"><br>&nbsp;<br><small>Closed GuiNotes displayed on the Active Window title bar</small><br>&nbsp;<br></div>
+
+<p>Each closed GuiNote includes a right-click menu with controls for editing (color change only), printing, deletion, and
+manual arrangement.
+</div>
+
+
+
+
+
+<a name="IV."></a><h2>IV. Creating New GuiNotes</h2>
+
+<p>New GuiNotes, which are initially open (see <a href="#III.B.">III.B. Open GuiNotes</a>), may be created by either:
+<ul>
+	<li>Double-clicking on the Taskbar Icon,
+	<li>Selecting from the New Note items in the Taskbar Icon Menu, or
+	<li>Selecting a color from the New Note submenu in any closed GuiNote right-click menu.
+</ul>
+
+<p>Double-clicking on the Taskbar Icon creates a new note of the default color indicated by the icon.  Selecting one of the
+New Note items from either the Taskbar Icon Menu or the New Note submenu of a closed GuiNote right-click menu creates a new
+GuiNote of the selected color and also changes the default color to the selected color.<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes8.jpg"><br>&nbsp;<br><small>The Right-Click menu of a closed
+GuiNote with the New Note submenu selected</small><br>&nbsp;<br></div>
+
+<p>New GuiNotes are inserted into the arrangement of closed GuiNotes in the rightmost space available.  If no spaces
+are available, the new GuiNote is added in a new leftmost position.
+
+<p>The number of GuiNotes is limited to 64.  A popup window informs the user when the limit has been reached.
+
+
+
+
+
+<a name="V."></a><h2>V. Opening GuiNotes</h2>
+
+<!--
+<p>A closed GuiNote may be opened to enable editing its text by double-clicking on it or by selecting Open from its
+right-click menu.  When opening a GuiNote, the closed GuiNote disappears and an open GuiNote containing the note text
+appears.
+-->
+
+<p>Double-clicking on a closed GuiNote or selecting Open from the closed GuiNote's right-click menu opens the note for
+editing.  The closed GuiNote is removed from the title bar, but will
+be replaced to the same location when the open GuiNote is closed.  The remaining closed GuiNotes remain in their prior
+positions on the previously active window.  Any number of GuiNotes may be open at the same time.<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes7.jpg"><br>&nbsp;<br><small>An opened GuiNote that was previously closed</small><br>&nbsp;<br></div>
+
+
+
+
+
+<a name="VI."></a><h2>VI. Editing GuiNotes</h2>
+
+<a name="VI.A."></a><h3>VI.A. Editing Text</h3>
+
+<p>Text can be edited in a GuiNote by typing text into the note and by use of the standard
+editing functions provided in the right-click menu.  Additionally, standard keyboard
+shortcuts may be used. A GuiNote automatically saves changes to its text when it is closed
+or when another window is activated.
+
+Changes to the text are automatically saved
+when the GuiNote is closed or when another window is activated.
+
+<p>Text cannot be edited in closed GuiNotes.  However, text may be copied from a closed note by highlighting the text
+and using the standard ctrl-c keyboard shortcut.
+
+<a name="VI.B."></a><h3>VI.B. Changing GuiNote Color</h3>
+
+<p>The color of a GuiNote can be changed, whether it is open or closed, by selection of the desired color from the 
+Color submenu in its right-click menu.
+
+
+
+<a name="VII."></a><h2>VII. Printing GuiNotes</h2>
+
+<p>A GuiNote can be printed, whether it is open or closed, by selection of Print from its right-click menu.
+
+<a name="VII.A."></a><h3>VII.A. Sizing Print Output</h3>
+
+<p>The size of the print output can be changed if the GuiNote is opened.  To size the print
+output:
+<ol>
+<li> Resize the opened GuiNote normally, for example by clicking and dragging the edge of the
+window, and then
+<li> Print the GuiNote by selecting Print from its right-click menu.
+</ol>
+The print output will be automatically sized to match the size of the GuiNote on the screen.
+
+<p> The print output cannot be changed if a closed GuiNote is printed.  In this case, the print is sized to the default
+size of an opened GuiNote.
+
+
+
+
+<a name="VIII."></a><h2>VIII. Closing GuiNotes</h2>
+
+<p>An open GuiNote may be closed by either:
+<ul>
+	<li> clicking the X title bar button,
+	<li> selecting Close from the system menu,
+	<li> selecting Close from the right-click menu, or
+	<li> by hitting the Esc key.
+</ul>
+Closing an opened GuiNote returns it to its position on the active window title bar.  If the
+closed GuiNotes are not currently visible due to the lack of a currently active window, the
+newly closed GuiNote will be repositioned on the active window title bar when a window with a
+title bar is activated.
+
+
+
+
+
+<a name="IX."></a><h2>IX. Deleting GuiNotes</h2>
+
+<p>A GuiNote may be deleted, whether it is open or closed, by selecting Delete Note from its right-click menu.  A deletion
+will leave a space in the row of closed GuiNotes where a new GuiNote may be inserted.  The space may also be deleted (See
+Delete Spaces).<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes9.jpg"><br>&nbsp;<br><small>Closed
+GuiNotes on the Active Window Title Bar after a Deletion</small><br>&nbsp;<br></div>
+
+<p>Deleted GuiNotes are unrecoverable.  Consequently, a verification popup window is
+presented before a GuiNote is deleted.
+
+
+
+
+
+<a name="X."></a><h2>X. Positioning of Closed GuiNotes</h2>
+
+<a name="X.A."></a><h3>X.A. Manual Positioning</h3>
+
+<p>Closed GuiNotes may be arranged by the user in a number of ways, including:
+
+<ul>
+	<li>Bring to Front,
+	<li>Send to Back,
+	<li>Restack Notes, and
+	<li>Delete Spaces.
+</ul>
+
+<a name="X.A.1."></a><h4>X.A.1. Bring to Front</h4>
+
+<p>Clicking on a closed GuiNote positions it in front of all other closed GuiNotes.
+
+<a name="X.A.2."></a><h4>X.A.2. Send to Back</h4>
+
+<p>Selecting "Send to Back" from a closed GuiNote right-click menu positions the GuiNote behind
+all other closed GuiNotes.  A GuiNote may not be visible after being sent to the back of the
+other notes, and restacking may be needed to see the note (see <a href="#X.A.3.">X.A.3. Restack Notes</a>).
+
+<a name="X.A.3."></a><h4>X.A.3. Restack Notes</h4>
+
+<p>Selecting "Restack Notes" from any closed GuiNote right-click menu restacks all of the closed GuiNotes so that at least
+a portion of each is visible.  This is useful in relocating a GuiNote that is not visible because it has been sent to the
+back.
+
+<a name="X.A.4."></a><h4>X.A.4. Delete Spaces</h4>
+
+<p>When a GuiNote is deleted, a space is left in the row of closed notes in the location previously occupied by the deleted
+GuiNote.  Selecting "Delete Spaces" from any closed GuiNote right-click menu deletes spaces left from GuiNote deletions,
+repositioning the remaining GuiNotes in a contiguous row.
+
+
+
+
+
+<a name="X.B."></a><h3>X.B. Automatic Positioning</h3>
+
+<!--
+<p>Intrinsic positioning is positioning that is built-in and cannot be changed or controlled by
+the user, and includes:
+-->
+
+<p>Automatic positioning controls positioning of the closed GuiNotes to maximize visibility
+while minimizing interference with other items displayed on the screen.  The automatic
+positioning includes:
+
+<ul>
+	<li>Positioning on the Active Window Title Bar,
+	<li>Overlapping, Compression and Hiding on the Active Window Title Bar, and
+	<li>Hiding in Other Situations.
+</ul>
+
+<a name="X.B.1."></a><h4>X.B.1. Positioning on the Active Window Title Bar</h4>
+
+<p>The closed GuiNotes are automatically positioned as a group on the active window title bar
+when a window is activated, for example
+when a window first appears or when the user clicks on a window.  If a different window is
+activated, the closed GuiNotes are
+automatically moved to the newly activated window so as to always be positioned on the
+window with which the user is working.
+
+<p>When the active window on which the closed GuiNotes are positioned is closed, minimized,
+or hidden, the closed GuiNotes are automatically moved to the new active window or hidden if no
+other window is activated.
+
+<p>There are some exceptions to the positioning of the closed GuiNotes on the active window
+title bar.  These include positioning on Multiple Document Interfaces Applications, Tool Windows,
+and Open GuiNotes.
+
+<a name="X.B.1.i."></a><h5>X.B.1.i. Multiple Document Interfaces Applications</h5>
+<p>A multiple document interface (MDI) application is an application with a main window
+that can include multiple child windows contained within
+the main window.  GuiNotes are positioned on the main window title bar of MDI applications.
+Activations of child windows within the main window have no effect on GuiNote positioning.
+
+<a name="X.B.1.ii."></a><h5>X.B.1.ii. Tool Windows</h5>
+<p>A tool window is a window intended to be used as a floating toolbar.  A tool window has a
+title bar that is more narrow than
+a normal title bar, and the window title is drawn using a smaller font.  Closed GuiNotes are
+automatically hidden when a tool window is activated.
+
+<a name="X.B.1.iii."></a><h5>X.B.1.iii. Open GuiNotes</h5>
+<p>Closed GuiNotes are not moved to the title bar of an open GuiNote, even if the open GuiNote
+is the active
+window.  Instead, the closed GuiNotes remain positioned
+on the title bar of the previously active window or, if they are currently hidden, they will
+remain hidden.
+
+<a name="X.B.2."></a><h4>X.B.2. Overlapping, Compression and Hiding on the Active Window Title Bar</h4>
+
+<p>The closed GuiNotes are automatically overlapped, compressed, or hidden based on the available space on the active 
+window title bar.  The following three illustrations show GuiNote positioning for different window widths.<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes2.jpg"><br>&nbsp;<br><small>Closed GuiNotes overlapped on the Active Window Title Bar</small></div>
+
+<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes3.jpg"><br>&nbsp;<br><small>Closed GuiNotes compressed on the Active Window Title Bar</small></div>
+
+<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes4.jpg"><br>&nbsp;<br><small>Closed GuiNotes hidden</small></div>
+
+
+<br>&nbsp;
+<br>
+<a name="X.B.3."></a><h4>X.B.3. Hiding in Other Situations</h4>
+<p>There are a variety of situations when the closed GuiNotes are hidden other than due to
+a narrow window width, including:
+<ul>
+	<li>No Active Window,
+	<li>Active Window has no Title Bar, and
+	<li>Active Window has a Virtual Title Bar.
+</ul>
+
+<a name="X.B.3.i."></a><h5>X.B.3.i. No Active Window</h5>
+<p>Since the location to display the closed GuiNotes is determined by what window is active,
+the closed GuiNotes will be hidden if no window is currently active.  The lack of an active
+window often occurs as a normal part of Windows operation when an application closes or is
+minimized.
+
+<a name="X.B.3.ii."></a><h5>X.B.3.ii. Active Window has no Title Bar</h5>
+<p>If the active window has no title bar, the closed GuiNotes will be hidden because there is no
+available space in which to place the closed GuiNotes.  For example, a title window or
+"splash screen" that is displayed when an application starts usually lacks a title bar and 
+displaying the GuiNotes on such a window would significantly obstruct the users view of the
+window content.
+
+<a name="X.B.3.iii."></a><h5>X.B.3.iii. Active Window has a Virtual Title Bar</h5>
+<p>Some applications include windows that have virtual title bars that replace the
+title bars which are normally controlled by the Windows operating system. Windows with 
+virtual title bars often have a significantly different appearance from title bars of other
+applications. The closed GuiNotes are hidden when a window with a virtual title bar is the
+active window because the size and position of the title bar and its parts cannot be determined.
+
+<a name="X.C."></a><h3>X.C. Automatic Positioning Options</h3>
+
+<p>Automatic Positioning Options control limits on the automatic positioning discussed above.
+
+<a name="X.C.1."></a><h4>X.C.1. Avoid Captions</h4>
+
+<p>The Avoid Captions option in the Taskbar Icon Menu controls whether or not the closed GuiNotes overlap the text
+displayed on the active title bar, i.e. the caption.  If Avoid Captions is selected, the closed GuiNotes are positioned 
+between the caption and the buttons on the right side of the title bar so that they do not overlap the caption.<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes2.jpg"><br>&nbsp;<br><small>Closed GuiNotes displayed with Avoid Captions option selected</small></div>
+
+<p>Deselecting the Avoid Captions option may cause part of the caption text to be obscured but
+provides additional space for displaying the GuiNotes.<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes5.jpg"><br>&nbsp;<br><small>Closed GuiNotes displayed with Avoid Captions option deselected</small><br>&nbsp;<br></div>
+
+<p>Even with Avoid Captions deselected, a portion of the caption between the system menu icon (or window edge)
+and the GuiNotes is always reserved to allow the user to manipulate the window normally.<br>&nbsp;<br>
+
+<a name="X.C.2."></a><h4>X.C.2. Avoid Added Button</h4>
+
+<p>Some applications have an additional button provided on the title bar for controlling a window option such as whether
+the window is kept always on top of other windows.  If the closed GuiNotes overlap such a button, the Avoid
+Added Button option in the Taskbar Icon Menu can be selected to add space equal to the width of an additional button to
+the right of the GuiNotes so that they avoid overlapping the button.<br>&nbsp;<br>
+
+<div class="guinoteimg"><img src="GuiNotes6.jpg"><br>&nbsp;<br><small>Closed GuiNotes displayed with Avoid Added Button option selected</small><br>&nbsp;<br></div>
+
+<a name="X.C.3."></a><h4>X.C.3. Hide on Popups</h4>
+
+<p>A popup window is a special type of window used for dialog boxes, message boxes, and other temporary windows
+that appear outside an application's main window.  Popup windows are often small, and closed GuiNotes displayed on them are
+often highly overlapped or compressed (see <a href="#X.B.2.">X.B.2. Overlapping, Compression and Hiding on the Active Window Title Bar</a>).  Further, if popup windows are frequently opened, the closed GuiNotes will be
+frequently repositioned.
+
+<p>The Hide on Popups option can be selected to reduce visual distraction from frequent repositioning and from
+repositioning to minimally useful
+positions. If selected, the closed GuiNotes are automatically hidden when a popup window is activated and redisplayed when
+the application's main window or another non-popup window is activated.
+
+<p>It should be noted that some windows that appear to be main windows may actually be popup windows.  If such a window is
+activated and Hide on Popups is selected, the closed GuiNotes will be hidden when they might be expected to be displayed.
+
+</blockquote>
+
+<hr style="margin-top:2em;">
+
+<footer style="text-align:center; font-style:italic; margin-top:2em;"><small>GuiNotes Instruction Manual - Version 1.0 – Copyright © 2004 David Yockey</small></footer>
+
+</body>
+</html>
