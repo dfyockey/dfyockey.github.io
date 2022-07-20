@@ -2,17 +2,23 @@
     <head>
         <title>dfyockey.github.io</title>
         <style>
+            #author     { font-style:italic}
+            
             h3          { margin-bottom:0em; display:none;}
             #morereadmes{ display:none; }
+            
             .cites      { margin-left:1.5em; }
             dl          { margin-left:1.5em; margin-top:0.25em; }
             dt          { display:inline; margin-left:0; }
             dd          { margin-left:1.5em; }
             dd:before   { content:" — "; }
+            
+            #footnotes li { margin-left:-2.5ex; list-style-type:none; }
         </style>
     </head>
     <body>
         <h1>Collection of Self-Authored Technical Documents</h1>
+        <h2 id='author'>by <a href="https://github.com/dfyockey" target='_blank'>David Yockey</a></h2>
         <hr />
         
         <h2>Project-related</h2>
@@ -28,20 +34,26 @@
             <h3>Xsltpeds</h3>
             <dl>
                 <dt><cite><a href="https://github.com/dfyockey/xsltpeds/blob/df4d2403997929c842ce70a3479a8a061a2396ec/README.md" target='_blank'>Exemplary Readme File – Xsltpeds (md)</a></cite></dt>
-                <dd>Document outlining installation and usage of an application that simplifies viewing of search results in requested XML downloads from the USPTO's<sup><a href='#footnote_1'>1</a></sup> Patent Examination Data System.
+                <dd>Document outlining installation and usage of an application that simplifies viewing of search results in requested XML downloads from the USPTO's<sup><a href='#footnote_1' id='back_1'>1</a></sup> Patent Examination Data System.
                 <p id='morereadmes'>— Excluding those for the 'Vulcan', dfyockey, and dfyockey.github.io repositories, additional readme file examples are available as introductory pages of each repository at <a href="https://github.com/dfyockey?tab=repositories" target='_blank'>https://github.com/dfyockey?tab=repositories.</a></p></dd>
             </dl>
             
             <h3>Bus Schedule Generation</h3>
             <dl>
                 <dt><cite><a href="https://github.com/dfyockey/dfyockey.github.io/raw/main/documentation/Skedc.summary.pdf" target='_blank'>Skedc.summary (pdf)</a></cite></dt>
-                <dd>API documentation for Perl modules to access and manipulate WMATA<sup><a href='#footnote_2'>2</a></sup> GTFS bus schedule data stored in a MariaDB or MySQL database.</dd>
+                <dd>API documentation for Perl modules to access and manipulate WMATA<sup><a href='#footnote_2' id='back_2'>2</a></sup> GTFS bus schedule data stored in a MariaDB or MySQL database.</dd>
             </dl>
             
             <h3>Laptop Modification</h3>
             <dl>
                 <dt><cite><a href="https://diyreader.blogspot.com/" target='_blank'>DIY Ebook Reader (blog with added custom javascript)</a></cite></dt>
                 <dd>Details on modifying an old laptop into a stationary tablet-like reader.</dd>
+            </dl>
+            
+            <h3>HTML Help</h3>
+            <dl>
+                <dt><cite><a href="https://github.com/dfyockey/dfyockey.github.io/raw/main/documentation/TreeConstructorHTMLHelp.zip">Tree Constructor Help (zip)</a></cite></dt>
+                <dd>HTML Help for a hierarchial text storage application. Viewing on non-Windows systems may require additional software which may not provide accurate rendering.</dd>
             </dl>
             
             <h3>GuiNotes</h3>
@@ -80,9 +92,9 @@
         
         <footer>
             <small>
-                <ol>
-                    <li id='footnote_1'>United States Patent and Trademark Office</li>
-                    <li id='footnote_2'>Washington Metropolitian Area Transit Authority</li>
+                <ol id='footnotes'>
+                    <li id='footnote_1'><a href='#back_1'>1</a>. United States Patent and Trademark Office</li>
+                    <li id='footnote_2'><a href='#back_2'>2</a>. Washington Metropolitian Area Transit Authority</li>
                 </ol>
             </small>
         </footer>
